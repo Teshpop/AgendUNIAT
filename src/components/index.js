@@ -1,3 +1,5 @@
-import Button from "./Button";
+import AudioRoom from "./AudioRoom.jsx";
+import GreenRoom from "./GreenRoom.jsx";
+import Hero from "./Hero.jsx";
 
-export { Button };
+export { AudioRoom, GreenRoom, Hero };
