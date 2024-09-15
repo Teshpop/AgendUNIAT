@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./css/index.css";
 
 const Hero = () => {
   return (
