@@ -1,9 +1,8 @@
 const AudioRoom = () => {
   return (
-    <>
+    <section id="AudioRoom" className="h-screen bg-OrangeBG">
       <h1>AudioRoom</h1>
-      <h2>AudioRoom</h2>
-    </>
+    </section>
   );
 };
 
