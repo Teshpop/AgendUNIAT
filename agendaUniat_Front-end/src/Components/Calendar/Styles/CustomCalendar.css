@@ -1,0 +1,140 @@
+/* Importar después del CSS por defecto del calendario */
+.react-calendar {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Título del mes */
+.react-calendar__navigation {
+  display: none !important;
+}
+
+/* Contenedor de la vista del mes */
+.react-calendar__viewContainer {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 1rem !important;
+}
+
+/* Contenedor del mes */
+.react-calendar__month-view {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Ocultar cabecera de días */
+.react-calendar__month-view__weekdays {
+  display: none !important;
+}
+
+/* Grid de días - Mobile first */
+.react-calendar__month-view__days {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(50px, 120px)) !important;
+  gap: 15px !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+/* Estilo para cada día */
+.react-calendar__tile {
+  background: #333 !important;
+  border-radius: 15px !important;
+  aspect-ratio: 1 !important;
+  color: white !important;
+  font-size: 1.2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+/* Ocultar días del fin de semana */
+.react-calendar__month-view__days__day--weekend {
+  display: none !important;
+}
+
+/* Días deshabilitados */
+.react-calendar__tile:disabled {
+  background: #8b4513 !important;
+  opacity: 1 !important;
+}
+
+/* Día seleccionado */
+.react-calendar__tile--active {
+  background: #1a1a1a !important;
+  transform: translateY(2px) !important;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Hover sobre días habilitados */
+.react-calendar__tile:enabled:hover {
+  background: #444 !important;
+}
+
+/* Media Queries */
+/* Móviles en landscape y tablets pequeñas */
+@media (min-width: 480px) {
+  .react-calendar__month-view__days {
+    grid-template-columns: repeat(5, minmax(70px, 90px)) !important;
+    gap: 12px !important;
+  }
+
+  .react-calendar__tile {
+    font-size: 1.4rem !important;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .react-calendar__month-view__days {
+    grid-template-columns: repeat(5, minmax(90px, 120px)) !important;
+    gap: 16px !important;
+  }
+
+  .react-calendar__tile {
+    font-size: 1.4rem !important;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .react-calendar__month-view__days {
+    grid-template-columns: repeat(6, minmax(100px, 120px)) !important;
+    gap: 30px 80px !important;
+  }
+
+  .react-calendar__tile {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* Prevenir scroll */
+body {
+  overflow: hidden;
+}
+
+/* Ocultar completamente los fines de semana */
+.weekday-only .react-calendar__month-view__days {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+}
+
+/* Ajustar el tamaño de la cuadrícula */
+/* .react-calendar__month-view__days {
+  height: 100vh !important;
+  gap: 1px !important;
+  padding: 1px !important;
+} */
